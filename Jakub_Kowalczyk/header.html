@@ -1,0 +1,43 @@
+ <header>
+    <p id="napis"><a href="index.php">Serwis telefonów komórkowych</a></p>
+    <p id="czas" style="font-family:'Ubuntu', sans-serif;"></p>
+    
+    <script>
+    function czas()
+        {
+            var dzisiaj=new Date();
+            var godzin=dzisiaj.getHours();
+            var minut=dzisiaj.getMinutes();
+            var sekund=dzisiaj.getSeconds();
+            if(sekund<10)
+                {
+                    sekund='0'+sekund;
+                }
+            if(godzin<10)
+                {
+                    godzin='0'+godzin;
+                }
+            if(minut<10)
+                {
+                    minut='0'+minut;
+                }
+            document.getElementById("czas").innerHTML=godzin+":"+minut+":"+sekund;
+            setTimeout("czas()",1000);
+        }
+        
+        
+    </script>
+    <nav>
+    <ul>
+        <li><a href="opinie.php">Opinie</a></li> 
+        <li><a href="produkty.php">Produkty</a></li>    
+        <li><a href="kontakt.php">Kontakt</a></li>   
+        <li><a href="galeria.php">Galeria</a></li>
+        <li><a href="rezerwacja.php">Rezerwacja</a></li>
+        <li><a href="rejestracja.php">Rejestracja</a></li>
+        <li><a href="logowanie.php">Logowanie</a></li>
+    </ul>    
+        
+    </nav>
+    
+    </header>
